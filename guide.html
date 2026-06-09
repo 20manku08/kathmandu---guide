@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Guide - Kathmandu Hub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="logo-container">
+                <h1>Kathmandu Travel Guide</h1>
+                <p>The essential companion for navigating Kathmandu like a seasoned local.</p>
+            </div>
+             <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home Overview</a>
+                    <a href="places.html">Historical Monuments</a>
+                    <a href="food.html">Local Food Cuisine</a>
+                    <a href="culture.html">Festivals & Music</a>
+                    <a href="guide.html" class="active">Travel Guide</a> 
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <h2>Essential Tips for Visitors</h2>
+            <p class="section-desc">Practical information to help you navigate your journey through the historic valley safely and respectfully.</p>
+
+            <div class="guide-grid">
+
+                <div class="guide-card">
+                    <div class="guide-badge">🙏 Etiquette</div>
+                    <h3>Temple Respect</h3>
+                    <p>Always remove your shoes before entering religious sanctuaries. Walk clockwise around the stupas and shrines, and ensure your shoulders and knees are covered respectfully.</p>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-badge">🚖 Transport</div>
+                    <h3>Local Commuting</h3>
+                    <p>Pathao, InDrive, and Yango are the easiest ride-sharing apps to use inside the valley. For a local experience, you can try out the local micro-buses or Safa Tempos.</p>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-badge">☀️ Season</div>
+                    <h3>Autumn Clarity</h3>
+                    <p>The premium months to explore are between OCtober and December. The monsoon rains completely clear out the atmosphere, offering flawless views of the surrounding Himalayas.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h4>Is it safe to drink the tap water in Kathmandu?</h4>
+                    <p>No, tap water is not safe for drinking. Stick strictly to bottled mineral water, which is cheap and widely available at every local shop.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Where can I get a local tourist SIM card?</h4>
+                    <p>You can easily get an Ncell or Nepal Telecom (NTC) SIM card right at Tribhuvan International Airport or at local telecom stalls using your passport copy and a photo.</p>
+                </div>
+            </div>
+
+            <div class="contacts-section">
+                <h2>Essential Contacts</h2>
+
+                <div class="contacts-grid">
+                    <div class="contact-box">
+                        <h5>🚨 Tourist Police</h5>
+                        <p class="phone-num">1144</p>
+                        <p class="contact-desc">Dedicated assistance for security and guidance.</p>
+                    </div>
+
+                    <div class="contact-box">
+                        <h5>🚑 Ambulance (Red Cross)</h5>
+                        <p class="phone-num">102</p>
+                        <p class="contact-desc">24/7 emergncy medical transportation services.</p>
+                    </div>
+
+                    <div class="contact-box">
+                        <h5>✈️ Airport Information</h5>
+                        <p class="phone-num">01-4113033</p>
+                        <p class="contact-desc">Tribhuvan International Airport flight inquiries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🪙 Interactive Travel Budget Estimator Section -->
+            <div class="calculator-section">
+                <h2>Budget Estimator (NPR)</h2>
+                <p class="secton-desc">Plan your trip expenses by selecting your travel style preferneces below.</p>
+
+                <div class="calc-container">
+                    <div class="calc-form">
+                        <!-- Input 1: Number of Days -->
+                        <div class="form-group">
+                            <label for="days">Number of Days inside the Valley:</label>
+                            <input type="number" id="days" value="3" min="1" max="30">
+                        </div>
+
+                        <!-- Input 2: Stay Style -->
+                        <div class="form-group">
+                            <label for="stay">Accommodation Style:</label>
+                            <select id="stay">
+                                <option value="1500">Budget Hostel (Rs. 1,500/day)</option>
+                                <option value="4000" selected>Mid-Range Hotel (Rs. 4,000/day)</option>
+                                <option value="12000">Luxury Boutique Resort (Rs. 12,000/day)</option>
+                            </select>
+                        </div>
+
+                        <!-- Input 3: Food Style -->
+                        <div class="form-group">
+                            <label for="food">Daily Dining Preference:</label>
+                            <select id="food">
+                                <option value="1000">Local Street Food & Cafes (Rs. 1,000/day)</option>
+                                <option value="2500" selected>Standard Traditional Restaurants (Rs. 2,500/day)</option>
+                                <option value="6000">Fine Dining & Tourist Hubs (Rs. 6,000/day)</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="calc-btn" onclick="calculateBudget()">Estimate Total Cost</button>
+                    </div>
+
+                    <!-- Display Result Box -->
+                    <div class="calc-result-box">
+                        <h3>Estimated Total Expenses</h3>
+                        <div class="result-amount">Rs. <span id="total-price">19,500</span></div>
+                        <p class="result-note">*Estimates are based on standard local averages across Kathmandu, Bhaktapur, and Lalitpur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="converter-section">
+                <h2>Currency Exchange Converter</h2>
+                <p class="section-desc">Convert your estimated Nepali Rupee (NPR) expenses into your home currency using Live, up-to-the-minute international bank rates.</p>
+
+                <div class="converter-container">
+                    <div class="conv-form">
+                        <div class="form-group">
+                            <label for="npr-amount">Amount in NPR (Rs.):</label>
+                            <input type="number" id="npr-amount" value="12500" min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="target-currency">Convert To Native Currency:</label>
+                            <select id="target-currency" onchange="convertLiveCurrency()">
+                                <option value="INR" selected>INR - Indian Rupee (₹)</option>
+                                <option value="USD">USD - United States Dollar ($)</option>
+                                <option value="EUR">EUR - Euro (€)</option>
+                                <option value="GBP">GBP - British Pound (£)</option>
+                                <option value="AUD">AUD - Australian Dollar (A$)</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="calc-btn" onclick="convertLiveCurrency()">Fetch Live Conversion</button>
+                    </div>
+
+                    <div class="calc-result-box" style="border-color: var(--primary-deep);">
+                        <h3>Live Converted Estimate</h3>
+                        <div class="result-amount"><span id="exchange-output">₹ 0.00</span></div>
+                        <p class="result-note" id="rate-timestamp">*Fetching Live financial market rates via ExchangeRate API...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>Designed and coded completely line-by-line by <strong>Mayank Shah</strong> from Nepal.</p>
+                <p class="project-tag">Built for the Hack Club Macondo 14-Hour Build Camapaign.</p>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        function calculateBudget() {
+            // 1. Grab the values selected by the user in the form fields
+            var daysInput = document.getElementById('days').value;
+            var stayCostPerDay = document.getElementById('stay').value;
+            var foodCostPerDay = document.getElementById('food').value;
+
+            // 2. Convert text input into real whole numbers for math
+            var totalDays = parseInt(daysInput);
+
+            // 3. Prevents error if a user accidentally types 0 or a negative number
+            if (isNaN(totalDays) || totalDays < 1) {
+                alert("Please enter a valid number of days (minimum 1).");
+                return;
+            }
+
+            // 4. Run the calculation logic
+            var costPerDay = parseInt(stayCostPerDay) + parseInt(foodCostPerDay);
+            var totalBudget = costPerDay * totalDays;
+
+            // 5. Format the final calculation with commas so it reads nicely (e.g., 19,500)
+            var formattedTotal = totalBudget.toLocaleString();
+
+            // 6. Push the calculated value into the result display box on the screen
+            document.getElementById('total-price').innerText = formattedTotal;
+        }
+
+        function convertLiveCurrency() {
+            // 1. Get the NPR amount entered and the target currency code selected
+            var nprAmount = parseFloat(document.getElementById('npr-amount').value);
+            var targetCurrency = document.getElementById('target-currency').value;
+
+            // Validate the input number
+            if(isNaN(nprAmount) || nprAmount <= 0) {
+                alert("Please enter a valid amount to convert.");
+                return;
+            }
+
+            // 2. Set the text to a loading message while downloading data over the network
+            document.getElementById('exchange-output').innerText = "Updating...";
+
+            // 3. Connect to the free, live global currency exchange database
+            var apiUrl = "https://open.er-api.com/v6/latest/NPR";
+
+            fetch(apiUrl)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    // 4. Extract the precise exchange rates for the selected currency
+                    var exchangeRate = data.rates[targetCurrency];
+
+                    // 5. Perform the Live multiplication conversion math
+                    var convertedFinal = nprAmount * exchangeRate;
+
+                    // 6. Assign decorative currency symbols based on the selection
+                    var symbol = "₹ ";
+                    if (targetCurrency === "USD") symbol = "$ ";
+                    if (targetCurrency === "EUR") symbol = "€ ";
+                    if (targetCurrency === "GBP") symbol = "£ ";
+                    if (targetCurrency === "AUD") symbol = "A$ ";
+
+                    // 7. Render the final live number rounded to two decimal points
+                    document.getElementById('exchange-output').innerText = symbol + convertedFinal.toFixed(2);
+
+                    // 8. Display a live dynamic update timestamp message
+                    document.getElementById('rate-timestamp').innerText = "*Rates automatically updated live from global markets today.";
+                })
+                .catch(function(error) {
+                    // Fallback notice if user loses internet connectivity
+                    console.log("Error fetching currency:", error);
+                    document.getElementById('exchange-output').innerText = "Connection Error";
+                });
+        }
+
+        // Run the function once automatically when the page loads up so it isn't empty!
+        window.onload = function() {
+            convertLiveCurrency();
+        };
+    </script>
+</html>

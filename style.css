@@ -1,0 +1,915 @@
+/* --- Global Reset & Variables --- */
+:root {
+    --primary-deep: #0f172a;    /* Dark slate */
+    --accent-crimson: #be123c;  /* Traditional crimson red */
+    --light-slate: #f8fafc;     /* Clean background grey */
+    --card-surface: #ffffff;    /* Card background */
+    --text-primary: #1e293b;    /* Main body text */
+    --text-muted: #64748b;      /* Captions and descriptions */
+    --border-line: #e2e8f0;     /* Border lines */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--light-slate);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+/* --- Layout Container --- */
+.container {
+    max-width: 1050px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Header & Navigation Menu --- */
+header {
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.55)), 
+                url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop');
+    
+    background-size: cover;
+    background-position: center 38%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 5rem 1rem 3.5rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: auto;
+    width: 100%;
+    border-bottom: 5px solid var(--accent-crimson);
+}
+
+.logo-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: #f1f5f9;
+    font-size: 1.25 rem;
+    font-weight: 500;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    background-color: #1e293b;
+    padding: 0.4rem;
+    border-radius: 8px;
+    list-style: none;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav a.active {
+    color: #ffffff;
+    background-color: var(--accent-crimson);
+}
+
+/* --- Main Content Typography --- */
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-deep);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Home Page Feature Cards Grid --- */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.feature-card{
+    background-color: var(--card-surface);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translate(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.icon-placeholder {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-deep);
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Home Page Learn More Buttons --- */
+.card-btn {
+    display: inline-block;
+    color: var(--accent-crimson);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.card-btn:hover {
+    color: var(--primary-deep);
+}
+
+/* --- Info/Notice Box --- */
+.info-notice-box {
+    background-color: #f1f5f9;
+    border-left: 5px solid var(--accent-crimson);
+    padding: 1.5rem;
+    border-radius: 4px 8px 8px 4px;
+    margin-top: 4rem;
+}
+
+.info-notice-box h4 {
+    color: var(--primary-deep);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.info-notice-box p {
+    color:var(--text-muted);
+}
+
+/* --- Global Footer Area --- */
+footer {
+    background-color: var(--primary-deep);
+    color: #94a3b8;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 6rem;
+    border-top: 4px solid var(--accent-crimson);
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+.project-tag {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: #64748b;
+}
+
+/* =====================================================================================================
+   🏛 PLACES PAGE STYLING (places.html)
+   ===================================================================================================== */
+
+.monument-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.monument-card {
+    display: flex;
+    gap: 0;
+    background-color: var(--card-surface);
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    align-items: stretch;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    min-height: 350px;
+}
+.monument-image-box {
+    width: 35%;
+    min-width: 250px;
+    flex-shrink: 0;
+    display: block;
+    position: relative;
+}
+
+.monument-image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.monument-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.monument-badge {
+    background-color: #ffe4e6;
+    color: var(--accent-crimson);
+    font-weight: 800;
+    font-size: 1.4rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(190, 18, 60, 0.1);
+    margin-left: 2.5rem;
+    align-self: center;
+}
+
+.monument-content {
+    flex: 1;
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.monument-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-deep);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.monument-location {
+    display: inline-block;
+    color: var(--accent-crimson);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    background-color: #fff1f2;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.monument-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    white-space: normal;
+}
+
+/* =====================================================================================================
+   🥟 FOOD PAGE STYLING (food.html)
+   ===================================================================================================== */
+
+.food-display-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.food-card {
+    background-color: var(--card-surface);
+    padding: 2.5rem 38% 2.5rem 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+.food-header h3 {
+    font-size: 1.4rem;
+    color: var(--primary deep);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --- Premium Price Tag Badges --- */
+.price-tag {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    border: 1px solid var(--border-line);
+}
+
+.food-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.food-image-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35%; 
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.food-image-box img{
+    width: 100%;
+    height: auto;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+/* =====================================================================================================
+   🎵 CULTURE PAGE STYLING (culture.html)
+   ===================================================================================================== */
+
+.culture-row {
+    background-color: var(--card-surface);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.culture-row.inversion {
+    flex-direction: row-reverse;
+}
+
+.culture-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.culture-row .text-block {
+    flex: 1.5;
+}
+
+.culture-row h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-deep);
+    font-weight: 700;
+    border-bottom: 2px solid #ffe4e6; /* Elegant soft underline accent */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.culture-row p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.culture-image-box {
+    flex: 1;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-line);
+}
+
+.culture-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================================================================================================
+   🧳 TRAVEL PAGE STYLING (guide.html)
+   ===================================================================================================== */
+
+/* This turns the vertical text list into a balanced grid layout. */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+/* Designing the white card boxes */
+.guide-card {
+    background-color: var(--card-surface);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Making the cards pop up gracefully when hovered over */
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Styling the little emoji badges inside the cards */
+.guide-badge {
+    align-self: flex-start;
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-line);
+}
+
+/* Card Titles */
+.guide-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-deep);
+    margin-bottom: 0.75rem;
+}
+
+/* Card Body Text */
+.guide-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* =====================================================================================================
+   🙋‍♂️ FAQ SECTION STYLING (guide.html)
+   ===================================================================================================== */
+
+/* Gives spacing to the whole FAQ region */
+.faq-section {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+/* Spaces out the main FAQ title */
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-deep);
+    margin-bottom: 2rem;
+}
+
+/* Styles each individual question container block */
+.faq-item {
+    background-color: var(--card-surface);
+    padding: 1.75rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-line);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Styles the bold question text */
+.faq-item h4 {
+    color: var(--accent-crimson);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Styles the answer paragraph text */
+.faq-item p {
+    color: var(--tet-muted);
+    line-height: 1.6;
+}
+
+/* =====================================================================================================
+   📞 ESSENTIAL CONTACTS STYLING (guide.html)
+   ===================================================================================================== */
+
+/* Spacing layout container for the entire section */
+.contacts-section {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.contacts-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary deep);
+    margin-bottom: 2rem;
+}
+
+/* Creates a 3-column row that breaks into a stack on small viewports */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Styling the individual contact block boxes */
+.contact-box {
+    background-color: var(--card-surface);
+    padding: 1.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-line);
+    text-align: center; /* Centers all content inside the box */
+}
+
+/* Style the contact names */
+.contact-box h5 {
+    font-size: 1.1rem;
+    color: var(--primary-deep);
+    margin-bottom: 0.5rem;
+}
+
+/* Make the telephone number stand out in crimson red */
+.phone-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-crimson);
+    margin-bottom: 0.5rem;
+}
+
+/* Description style */
+.contact-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* =====================================================================================================
+   🪙 INTERACTIVE BUDGET CALCULATOR STYLING (guide.html)
+   ===================================================================================================== */
+
+.calculator-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Side-by-side flex container for the form and results */
+.calc-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Form inputs container */
+.calc-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--card-surface);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+}
+
+/* Individual form groups for labels and inputs */
+.form-group{
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-deep);
+}
+
+/* Styling inputs and select dropdown items */
+.form-group input,
+.form-group select {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-line);
+    background-color: #ffffff;
+    color: var(--text-muted);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent-crimson); /* Highlights red when clicked */
+}
+
+/* The interactive calculation button */
+.calc-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-deep);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calc-btn:hover {
+    background-color: var(--accent-crimson); /* Smooth hover color switch */
+}
+
+/* Display card showing the total price result */
+.calc-result-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px dashed var(--border-line);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.calc-result-box h3 {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Big calculated number display */
+.result-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-crimson);
+    margin-bottom: 1rem;
+}
+
+.result-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* =====================================================================================================
+   💱 LIVE CURRENCY COVERTER SPECIAL STYLING (guide.html)
+   ===================================================================================================== */
+
+.converter-section  {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-top: 2px dashed var(--border-line); /* Clean visual separation line */
+}
+
+/* Side-by-side flexbox matching your budget layout */
+.converter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.conv-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--card-surface);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+}
+
+/* Give the interactive fetch button a premium dark slate color */
+.conv-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-deep);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.conv-btn:hover {
+    background-color: var(--accent-crimson); /* Flashes crimson on hover */
+    transform: translateY(-1px);
+}
+
+/* =====================================================================================================
+   📱 ALL-PAGES MASTER RESPONSIVE STYLING (max-width: 768px)
+   ===================================================================================================== */
+
+@media (max-width: 768px) {
+
+    /* -------------------------------------------------------------------------------------------------
+       1. GLOBAL HEADER & NAVIGATION (ALL Pages)
+       ------------------------------------------------------------------------------------------------- */
+    header {
+        height: auto; /* Stretches background vertically if links wrap */
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    nav {
+        display: flex; 
+        flex-direction: column; /* Stacks links neatly in a mobile menu format */
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0px;
+        box-sizing: border-box;
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+       2. HERO SECTIONS & TEXT HEADINGS (ALL Pages)
+       ------------------------------------------------------------------------------------------------- */
+    h1 {
+        font-size: 2rem !important; /* Prevents long titles from clipping on mobile screen */
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .content-container {
+        padding: 2rem 1rem !important; /* Gives breathing room on narrow viewports */
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+       3. MONUMENTS & FOOD PLACES (places.html / food.html)
+       ------------------------------------------------------------------------------------------------- */
+    /* If you used a grid layout for your monument or food item cards */
+    .places-grid, .food-grid, .grid-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* If you used standard flex rows for split text/image blocks */
+    .split-row, .feature-block {
+        flex-direction: column !important; 
+    }
+
+    .split-image, .split-text {
+        width: 100% !important;
+    }
+
+    .food-card {
+        padding: 2.5rem;
+    }
+
+    .food-image-box {
+       position: relative; 
+        width: 100%;
+        height: 220px;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .food-image-box img {
+        height: 100%;
+        width: auto;
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+       4. FESTIVALS & MUSIC CONTENT (culture.html)
+       ------------------------------------------------------------------------------------------------- */
+    .culture-section, .festival-card {
+        padding: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .culture-row,
+    .culture-row.inversion {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .culture-image-box {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+       5. TRAVEL GUIDE DETAILS (guide.html)
+       ------------------------------------------------------------------------------------------------- */
+    /* Stacks the 3 tip cards vertically */
+    .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    /* Adjusts the FAQ block margins and padding for small screens */
+    .faq-section {
+        margin-top: 3rem;
+    }
+
+    .faq-item {
+        padding: 1.25rem 1.25rem;
+    }
+
+    /* Stacks the emergency phone boxws into a uniform column list */
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-box {
+        padding: 1.5rem;
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+       6. FOOTER ADJUSTMENTS (ALL Pages)
+       ------------------------------------------------------------------------------------------------- */
+    footer {
+        padding: 2rem 1rem !important;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.5;
+    }
+}
