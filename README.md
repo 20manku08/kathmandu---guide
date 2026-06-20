@@ -1,23 +1,17 @@
-# 🏔️ Kathmandu Virtual Travel Hub
+# Kathmandu Travel Portal Site
 
-A comprehensive 10-day virtual guide dedicated to exploring the rich culture, historic landmarks, and incredible local food of the Kathmandu Valley. 
+Hello! Welcome to my web portal project. I created this 5-page site to be a virtual travel guide for international tourists who would like to visit the Kathmandu Valley.
 
-## 🌐 Live Demo
-Experience the live project here: [Famous Dango - Kathmandu Guide](https://famous-dango-9778b.netlify.app/)
+My aim was to develop a website where visitors get to see the culture, food, and heritage of my home country, Nepal.
 
-## 🎯 Purpose of the Project
-The Kathmandu Virtual Travel Hub was created to provide travelers with an immersive, structured 10-day itinerary to experience Kathmandu like a local. It highlights historical heritage sites, traditional cuisine, and cultural practices to promote tourism and cultural preservation.
+### ⬇️ Live Preview
+You can view my live and working site right here: [Insert your Netlify URL Link here]
 
-## ✨ Key Features
-* **10-Day Structured Itinerary:** A curated day-by-day plan covering temples, local markets, and scenic views.
-* **Responsive Visual Layout:** A clean web interface utilizing a custom mountain hero background section.
-* **Interactive Content Sections:** Dedicated modules highlighting historic places, cultural background notes, and culinary recommendations.
-* **Optimized Media Assets:** Embedded image galleries representing Kathmandu's vibrant architecture and food culture.
+### ⚙️ Development Technologies
+* **HTML5:** Developed using semantic HTML elements to structure all 5 pages.
+* **CSS3:** Utilized CSS Grids and Flexbox layout designs with a linear gradient shading layer to enhance reading.
 
-## 🛠️ Built With
-* HTML5
-* CSS3 (Custom responsive layouts and background mechanics)
-
-## 🚀 How to Run Locally
-1. Clone this repository: `git clone https://github.com/20manku08/kathmandu---guide.git`
-2. Navigate into the directory and open `index.html` in any modern web browser.
+### ✨ Features
+* Multi-page navigation system throughout various pages (Home Overview, Historical Sites, Food, Music, and Travel Guide).
+* Responsive card layouts.
+* Stunning panoramic backgrounds showcasing mountain views.
