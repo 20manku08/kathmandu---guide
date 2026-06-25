@@ -1,17 +1,15 @@
 # Kathmandu Travel Portal Site
 
-Hello! Welcome to my web portal project. I created this 5-page site to be a virtual travel guide for international tourists who would like to visit the Kathmandu Valley.
+This is a virtual hub built to help tourists easily navigate and plan their trips around Kathmandu Valley.
+I wanted to create a clean, accessible web application that mainl focuses on local travel spots, transit routes, and cultural hubs in my town.
+The programming languages or tech stack used in my project are:
+1) HTML5/CSS3
+2) JavaScript
+3) Netlify (for hosting)
 
-My aim was to develop a website where visitors get to see the culture, food, and heritage of my home country, Nepal.
+To run this project locally:
+1) Download or clone this repository to your computer.
+2) Open the project folder.
+3) Double-click on the 'index.html' file to open it directly in your web browser (like Chrome, Brave, or Firefox).
 
-### ⬇️ Live Preview
-You can view my live and working site right here: [Insert your Netlify URL Link here]
-
-### ⚙️ Development Technologies
-* **HTML5:** Developed using semantic HTML elements to structure all 5 pages.
-* **CSS3:** Utilized CSS Grids and Flexbox layout designs with a linear gradient shading layer to enhance reading.
-
-### ✨ Features
-* Multi-page navigation system throughout various pages (Home Overview, Historical Sites, Food, Music, and Travel Guide).
-* Responsive card layouts.
-* Stunning panoramic backgrounds showcasing mountain views.
+This is the project details for Macondo 14-hour Build Camapign.
